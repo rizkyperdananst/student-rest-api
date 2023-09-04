@@ -10,6 +10,22 @@ app.get('/', (req, res) => {
     res.send('Hello World');
 });
 
+app.get('/testing', (req, res) => {
+    res.json({
+        message: 'Hello World',
+        success: true,
+        code: 200,
+        data: {
+            name: 'Rizky',
+            age: 20,
+            address: 'Medan',
+            hobbies: ['Coding', 'Gaming'],
+            isMarried: false,
+
+        }
+    });
+});
+
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
